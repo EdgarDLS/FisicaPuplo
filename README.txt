@@ -3,7 +3,7 @@ INVERSE KINEMATICS | Octopus IK
 -----------------------------------
 
 Github Repository
-	* www.test.com
+	* https://github.com/rViiper/FisicaPuplo.git
 
 Main Classes
 	* IK_FABRIK.cs
