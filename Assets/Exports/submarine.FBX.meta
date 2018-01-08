@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: eaf4bbc3ce766974c8da642efc260a4c
+timeCreated: 1515360056
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm 01
+    100002: Arm 01_
+    100004: Arm 02
+    100006: Arm 03
+    100008: Arm 04
+    100010: Arm 05
+    100012: Arm 06
+    100014: Band 01
+    100016: Band 02
+    100018: Band 03
+    100020: Band 04
+    100022: Band 05
+    100024: Band 06
+    100026: Band 07
+    100028: Band 08
+    100030: Battery 01
+    100032: Battery 02
+    100034: Battery 03
+    100036: Battery 04
+    100038: Battery 05
+    100040: Battery 06
+    100042: Battery 07
+    100044: Battery 08
+    100046: Blade Arm 01
+    100048: Blade Arm 02
+    100050: Blade Arm 03
+    100052: Blade Arm 04
+    100054: Blade Arm 05
+    100056: Blade Arm 06
+    100058: Blade Arm 07
+    100060: Blade Arm 08
+    100062: Blade Arm 09
+    100064: Blade Arm 10
+    100066: Blade Arm 11
+    100068: Blade Arm 12
+    100070: Blade Arm 13
+    100072: Blade Arm 14
+    100074: Blade Arm 15
+    100076: Blade Arm 16
+    100078: Blade Guard 01
+    100080: Blade Guard 02
+    100082: Blade Guard 03
+    100084: Blade Guard 04
+    100086: Cage Left
+    100088: Cage Right
+    100090: Clasp 02
+    100092: Clasp 03
+    100094: Clasp Arm 01
+    100096: Clasp Arm 02
+    100098: Clasper Bottom 01
+    100100: Clasper Bottom 02
+    100102: Clasper Top 01
+    100104: Clasper Top 02
+    100106: Connector 01
+    100108: Connector 02
+    100110: Connector 03
+    100112: Connector 04
+    100114: Connector 05
+    100116: Connector 06
+    100118: Connector 07
+    100120: Connector 08
+    100122: Door
+    100124: Elbow Front
+    100126: Elbow Front01
+    100128: Elbow Start 01
+    100130: Elbow Start 02
+    100132: Engine Arm 01
+    100134: Engine Arm 02
+    100136: Engine Arm 03
+    100138: Engine Arm 04
+    100140: Engine Front 01
+    100142: Engine Front 02
+    100144: Engine Front 03
+    100146: Engine Front 04
+    100148: Engine Knob 01
+    100150: Engine Knob 02
+    100152: Engine Knob 03
+    100154: Engine Knob 04
+    100156: Front Light Housing
+    100158: Handle
+    100160: Hinge
+    100162: Joint 01
+    100164: Joint 02
+    100166: Lb01
+    100168: Lb02
+    100170: Light Glass
+    100172: Light Housing Top
+    100174: Light Metal Front
+    100176: Light Prism 01
+    100178: Light Stem
+    100180: Lower Arm 01
+    100182: Lower Arm 02
+    100184: MP01
+    100186: MP02
+    100188: MP03
+    100190: MP04
+    100192: Pad 01
+    100194: Pad 02
+    100196: Part 01
+    100198: Part 02
+    100200: Part 03
+    100202: Part 04
+    100204: Pod Front
+    100206: Pole 01
+    100208: Pole 02
+    100210: Pole 03
+    100212: Pole 04
+    100214: Port Door Rim
+    100216: Port Hole 01
+    100218: Port Hole 02
+    100220: Port Hole 03
+    100222: Port Window 01
+    100224: Port Window 02
+    100226: Port Window 03
+    100228: Propeller 01
+    100230: Propeller 02
+    100232: Propeller 03
+    100234: Propeller 04
+    100236: Rail 01
+    100238: Rail 02
+    100240: Ring 01
+    100242: Ring 02
+    100244: Ring 03
+    100246: Shoulder 01
+    100248: Shoulder 02
+    100250: Shoulder Joint 01
+    100252: Shoulder Joint 02
+    100254: Shoulder Pin 01
+    100256: Shoulder Pin 02
+    100258: Ski 01
+    100260: Ski 02
+    100262: Strap 01
+    100264: Strap 02
+    100266: Strap 03
+    100268: Strap 04
+    100270: Strap 05
+    100272: Strap 06
+    100274: Strap 07
+    100276: Strap 08
+    100278: //RootNode
+    100280: Support 01
+    100282: Support 02
+    100284: Support 03
+    100286: Support 04
+    100288: Tank 01
+    100290: Tank 02
+    100292: Tank 03
+    100294: Tank 04
+    100296: Tanks Board
+    100298: Top Rail
+    100300: Upper Arm 01
+    100302: Upper Arm 02
+    100304: Wheel Knob
+    100306: Wrist 01
+    100308: Wrist 02
+    400000: Arm 01
+    400002: Arm 01_
+    400004: Arm 02
+    400006: Arm 03
+    400008: Arm 04
+    400010: Arm 05
+    400012: Arm 06
+    400014: Band 01
+    400016: Band 02
+    400018: Band 03
+    400020: Band 04
+    400022: Band 05
+    400024: Band 06
+    400026: Band 07
+    400028: Band 08
+    400030: Battery 01
+    400032: Battery 02
+    400034: Battery 03
+    400036: Battery 04
+    400038: Battery 05
+    400040: Battery 06
+    400042: Battery 07
+    400044: Battery 08
+    400046: Blade Arm 01
+    400048: Blade Arm 02
+    400050: Blade Arm 03
+    400052: Blade Arm 04
+    400054: Blade Arm 05
+    400056: Blade Arm 06
+    400058: Blade Arm 07
+    400060: Blade Arm 08
+    400062: Blade Arm 09
+    400064: Blade Arm 10
+    400066: Blade Arm 11
+    400068: Blade Arm 12
+    400070: Blade Arm 13
+    400072: Blade Arm 14
+    400074: Blade Arm 15
+    400076: Blade Arm 16
+    400078: Blade Guard 01
+    400080: Blade Guard 02
+    400082: Blade Guard 03
+    400084: Blade Guard 04
+    400086: Cage Left
+    400088: Cage Right
+    400090: Clasp 02
+    400092: Clasp 03
+    400094: Clasp Arm 01
+    400096: Clasp Arm 02
+    400098: Clasper Bottom 01
+    400100: Clasper Bottom 02
+    400102: Clasper Top 01
+    400104: Clasper Top 02
+    400106: Connector 01
+    400108: Connector 02
+    400110: Connector 03
+    400112: Connector 04
+    400114: Connector 05
+    400116: Connector 06
+    400118: Connector 07
+    400120: Connector 08
+    400122: Door
+    400124: Elbow Front
+    400126: Elbow Front01
+    400128: Elbow Start 01
+    400130: Elbow Start 02
+    400132: Engine Arm 01
+    400134: Engine Arm 02
+    400136: Engine Arm 03
+    400138: Engine Arm 04
+    400140: Engine Front 01
+    400142: Engine Front 02
+    400144: Engine Front 03
+    400146: Engine Front 04
+    400148: Engine Knob 01
+    400150: Engine Knob 02
+    400152: Engine Knob 03
+    400154: Engine Knob 04
+    400156: Front Light Housing
+    400158: Handle
+    400160: Hinge
+    400162: Joint 01
+    400164: Joint 02
+    400166: Lb01
+    400168: Lb02
+    400170: Light Glass
+    400172: Light Housing Top
+    400174: Light Metal Front
+    400176: Light Prism 01
+    400178: Light Stem
+    400180: Lower Arm 01
+    400182: Lower Arm 02
+    400184: MP01
+    400186: MP02
+    400188: MP03
+    400190: MP04
+    400192: Pad 01
+    400194: Pad 02
+    400196: Part 01
+    400198: Part 02
+    400200: Part 03
+    400202: Part 04
+    400204: Pod Front
+    400206: Pole 01
+    400208: Pole 02
+    400210: Pole 03
+    400212: Pole 04
+    400214: Port Door Rim
+    400216: Port Hole 01
+    400218: Port Hole 02
+    400220: Port Hole 03
+    400222: Port Window 01
+    400224: Port Window 02
+    400226: Port Window 03
+    400228: Propeller 01
+    400230: Propeller 02
+    400232: Propeller 03
+    400234: Propeller 04
+    400236: Rail 01
+    400238: Rail 02
+    400240: Ring 01
+    400242: Ring 02
+    400244: Ring 03
+    400246: Shoulder 01
+    400248: Shoulder 02
+    400250: Shoulder Joint 01
+    400252: Shoulder Joint 02
+    400254: Shoulder Pin 01
+    400256: Shoulder Pin 02
+    400258: Ski 01
+    400260: Ski 02
+    400262: Strap 01
+    400264: Strap 02
+    400266: Strap 03
+    400268: Strap 04
+    400270: Strap 05
+    400272: Strap 06
+    400274: Strap 07
+    400276: Strap 08
+    400278: //RootNode
+    400280: Support 01
+    400282: Support 02
+    400284: Support 03
+    400286: Support 04
+    400288: Tank 01
+    400290: Tank 02
+    400292: Tank 03
+    400294: Tank 04
+    400296: Tanks Board
+    400298: Top Rail
+    400300: Upper Arm 01
+    400302: Upper Arm 02
+    400304: Wheel Knob
+    400306: Wrist 01
+    400308: Wrist 02
+    2300000: Arm 01
+    2300002: Arm 01_
+    2300004: Arm 02
+    2300006: Arm 03
+    2300008: Arm 04
+    2300010: Arm 05
+    2300012: Arm 06
+    2300014: Band 01
+    2300016: Band 02
+    2300018: Band 03
+    2300020: Band 04
+    2300022: Band 05
+    2300024: Band 06
+    2300026: Band 07
+    2300028: Band 08
+    2300030: Battery 01
+    2300032: Battery 02
+    2300034: Battery 03
+    2300036: Battery 04
+    2300038: Battery 05
+    2300040: Battery 06
+    2300042: Battery 07
+    2300044: Battery 08
+    2300046: Blade Arm 01
+    2300048: Blade Arm 02
+    2300050: Blade Arm 03
+    2300052: Blade Arm 04
+    2300054: Blade Arm 05
+    2300056: Blade Arm 06
+    2300058: Blade Arm 07
+    2300060: Blade Arm 08
+    2300062: Blade Arm 09
+    2300064: Blade Arm 10
+    2300066: Blade Arm 11
+    2300068: Blade Arm 12
+    2300070: Blade Arm 13
+    2300072: Blade Arm 14
+    2300074: Blade Arm 15
+    2300076: Blade Arm 16
+    2300078: Blade Guard 01
+    2300080: Blade Guard 02
+    2300082: Blade Guard 03
+    2300084: Blade Guard 04
+    2300086: Cage Left
+    2300088: Cage Right
+    2300090: Clasp 02
+    2300092: Clasp 03
+    2300094: Clasp Arm 01
+    2300096: Clasp Arm 02
+    2300098: Clasper Bottom 01
+    2300100: Clasper Bottom 02
+    2300102: Clasper Top 01
+    2300104: Clasper Top 02
+    2300106: Connector 01
+    2300108: Connector 02
+    2300110: Connector 03
+    2300112: Connector 04
+    2300114: Connector 05
+    2300116: Connector 06
+    2300118: Connector 07
+    2300120: Connector 08
+    2300122: Door
+    2300124: Elbow Front
+    2300126: Elbow Front01
+    2300128: Elbow Start 01
+    2300130: Elbow Start 02
+    2300132: Engine Arm 01
+    2300134: Engine Arm 02
+    2300136: Engine Arm 03
+    2300138: Engine Arm 04
+    2300140: Engine Front 01
+    2300142: Engine Front 02
+    2300144: Engine Front 03
+    2300146: Engine Front 04
+    2300148: Engine Knob 01
+    2300150: Engine Knob 02
+    2300152: Engine Knob 03
+    2300154: Engine Knob 04
+    2300156: Front Light Housing
+    2300158: Handle
+    2300160: Hinge
+    2300162: Joint 01
+    2300164: Joint 02
+    2300166: Lb01
+    2300168: Lb02
+    2300170: Light Glass
+    2300172: Light Housing Top
+    2300174: Light Metal Front
+    2300176: Light Prism 01
+    2300178: Light Stem
+    2300180: Lower Arm 01
+    2300182: Lower Arm 02
+    2300184: MP01
+    2300186: MP02
+    2300188: MP03
+    2300190: MP04
+    2300192: Pad 01
+    2300194: Pad 02
+    2300196: Part 01
+    2300198: Part 02
+    2300200: Part 03
+    2300202: Part 04
+    2300204: Pod Front
+    2300206: Pole 01
+    2300208: Pole 02
+    2300210: Pole 03
+    2300212: Pole 04
+    2300214: Port Door Rim
+    2300216: Port Hole 01
+    2300218: Port Hole 02
+    2300220: Port Hole 03
+    2300222: Port Window 01
+    2300224: Port Window 02
+    2300226: Port Window 03
+    2300228: Propeller 01
+    2300230: Propeller 02
+    2300232: Propeller 03
+    2300234: Propeller 04
+    2300236: Rail 01
+    2300238: Rail 02
+    2300240: Ring 01
+    2300242: Ring 02
+    2300244: Ring 03
+    2300246: Shoulder 01
+    2300248: Shoulder 02
+    2300250: Shoulder Joint 01
+    2300252: Shoulder Joint 02
+    2300254: Shoulder Pin 01
+    2300256: Shoulder Pin 02
+    2300258: Strap 01
+    2300260: Strap 02
+    2300262: Strap 03
+    2300264: Strap 04
+    2300266: Strap 05
+    2300268: Strap 06
+    2300270: Strap 07
+    2300272: Strap 08
+    2300274: //RootNode
+    2300276: Support 01
+    2300278: Support 02
+    2300280: Support 03
+    2300282: Support 04
+    2300284: Tank 01
+    2300286: Tank 02
+    2300288: Tank 03
+    2300290: Tank 04
+    2300292: Tanks Board
+    2300294: Top Rail
+    2300296: Upper Arm 01
+    2300298: Upper Arm 02
+    2300300: Wheel Knob
+    2300302: Wrist 01
+    2300304: Wrist 02
+    3300000: Arm 01
+    3300002: Arm 01_
+    3300004: Arm 02
+    3300006: Arm 03
+    3300008: Arm 04
+    3300010: Arm 05
+    3300012: Arm 06
+    3300014: Band 01
+    3300016: Band 02
+    3300018: Band 03
+    3300020: Band 04
+    3300022: Band 05
+    3300024: Band 06
+    3300026: Band 07
+    3300028: Band 08
+    3300030: Battery 01
+    3300032: Battery 02
+    3300034: Battery 03
+    3300036: Battery 04
+    3300038: Battery 05
+    3300040: Battery 06
+    3300042: Battery 07
+    3300044: Battery 08
+    3300046: Blade Arm 01
+    3300048: Blade Arm 02
+    3300050: Blade Arm 03
+    3300052: Blade Arm 04
+    3300054: Blade Arm 05
+    3300056: Blade Arm 06
+    3300058: Blade Arm 07
+    3300060: Blade Arm 08
+    3300062: Blade Arm 09
+    3300064: Blade Arm 10
+    3300066: Blade Arm 11
+    3300068: Blade Arm 12
+    3300070: Blade Arm 13
+    3300072: Blade Arm 14
+    3300074: Blade Arm 15
+    3300076: Blade Arm 16
+    3300078: Blade Guard 01
+    3300080: Blade Guard 02
+    3300082: Blade Guard 03
+    3300084: Blade Guard 04
+    3300086: Cage Left
+    3300088: Cage Right
+    3300090: Clasp 02
+    3300092: Clasp 03
+    3300094: Clasp Arm 01
+    3300096: Clasp Arm 02
+    3300098: Clasper Bottom 01
+    3300100: Clasper Bottom 02
+    3300102: Clasper Top 01
+    3300104: Clasper Top 02
+    3300106: Connector 01
+    3300108: Connector 02
+    3300110: Connector 03
+    3300112: Connector 04
+    3300114: Connector 05
+    3300116: Connector 06
+    3300118: Connector 07
+    3300120: Connector 08
+    3300122: Door
+    3300124: Elbow Front
+    3300126: Elbow Front01
+    3300128: Elbow Start 01
+    3300130: Elbow Start 02
+    3300132: Engine Arm 01
+    3300134: Engine Arm 02
+    3300136: Engine Arm 03
+    3300138: Engine Arm 04
+    3300140: Engine Front 01
+    3300142: Engine Front 02
+    3300144: Engine Front 03
+    3300146: Engine Front 04
+    3300148: Engine Knob 01
+    3300150: Engine Knob 02
+    3300152: Engine Knob 03
+    3300154: Engine Knob 04
+    3300156: Front Light Housing
+    3300158: Handle
+    3300160: Hinge
+    3300162: Joint 01
+    3300164: Joint 02
+    3300166: Lb01
+    3300168: Lb02
+    3300170: Light Glass
+    3300172: Light Housing Top
+    3300174: Light Metal Front
+    3300176: Light Prism 01
+    3300178: Light Stem
+    3300180: Lower Arm 01
+    3300182: Lower Arm 02
+    3300184: MP01
+    3300186: MP02
+    3300188: MP03
+    3300190: MP04
+    3300192: Pad 01
+    3300194: Pad 02
+    3300196: Part 01
+    3300198: Part 02
+    3300200: Part 03
+    3300202: Part 04
+    3300204: Pod Front
+    3300206: Pole 01
+    3300208: Pole 02
+    3300210: Pole 03
+    3300212: Pole 04
+    3300214: Port Door Rim
+    3300216: Port Hole 01
+    3300218: Port Hole 02
+    3300220: Port Hole 03
+    3300222: Port Window 01
+    3300224: Port Window 02
+    3300226: Port Window 03
+    3300228: Propeller 01
+    3300230: Propeller 02
+    3300232: Propeller 03
+    3300234: Propeller 04
+    3300236: Rail 01
+    3300238: Rail 02
+    3300240: Ring 01
+    3300242: Ring 02
+    3300244: Ring 03
+    3300246: Shoulder 01
+    3300248: Shoulder 02
+    3300250: Shoulder Joint 01
+    3300252: Shoulder Joint 02
+    3300254: Shoulder Pin 01
+    3300256: Shoulder Pin 02
+    3300258: Strap 01
+    3300260: Strap 02
+    3300262: Strap 03
+    3300264: Strap 04
+    3300266: Strap 05
+    3300268: Strap 06
+    3300270: Strap 07
+    3300272: Strap 08
+    3300274: //RootNode
+    3300276: Support 01
+    3300278: Support 02
+    3300280: Support 03
+    3300282: Support 04
+    3300284: Tank 01
+    3300286: Tank 02
+    3300288: Tank 03
+    3300290: Tank 04
+    3300292: Tanks Board
+    3300294: Top Rail
+    3300296: Upper Arm 01
+    3300298: Upper Arm 02
+    3300300: Wheel Knob
+    3300302: Wrist 01
+    3300304: Wrist 02
+    4300000: Sub Back
+    4300002: Connector 05
+    4300004: Battery 05
+    4300006: Connector 06
+    4300008: Battery 06
+    4300010: Connector 01
+    4300012: Battery 01
+    4300014: Connector 02
+    4300016: Battery 02
+    4300018: Connector 03
+    4300020: Battery 03
+    4300022: Connector 04
+    4300024: Battery 04
+    4300026: Connector 07
+    4300028: Battery 07
+    4300030: Connector 08
+    4300032: Battery 08
+    4300034: Ring 01
+    4300036: Ring 02
+    4300038: Ring 03
+    4300040: Pole 01
+    4300042: Pad 01
+    4300044: Rail 01
+    4300046: Pole 02
+    4300048: Top Rail
+    4300050: Cage Left
+    4300052: Cage Right
+    4300054: Tanks Board
+    4300056: Tank 01
+    4300058: Band 01
+    4300060: Band 02
+    4300062: Strap 01
+    4300064: Strap 02
+    4300066: Tank 02
+    4300068: Band 03
+    4300070: Band 04
+    4300072: Strap 03
+    4300074: Strap 04
+    4300076: Tank 03
+    4300078: Band 05
+    4300080: Band 06
+    4300082: Strap 05
+    4300084: Strap 06
+    4300086: Tank 04
+    4300088: Band 07
+    4300090: Band 08
+    4300092: Strap 07
+    4300094: Strap 08
+    4300096: Engine Arm 01
+    4300098: Arm 01
+    4300100: Engine Front 01
+    4300102: MP01
+    4300104: Blade Arm 02
+    4300106: Blade Arm 01
+    4300108: Blade Arm 03
+    4300110: Blade Arm 04
+    4300112: Blade Guard 01
+    4300114: Engine Knob 01
+    4300116: Propeller 01
+    4300118: Pole 04
+    4300120: Pole 03
+    4300122: Pad 02
+    4300124: Rail 02
+    4300126: Pod Front
+    4300128: Light Housing Top
+    4300130: Light Glass
+    4300132: Lb01
+    4300134: Lb02
+    4300136: Port Door Rim
+    4300138: Hinge
+    4300140: Door
+    4300142: Wheel Knob
+    4300144: Arm 01_
+    4300146: Handle
+    4300148: Arm 02
+    4300150: Arm 03
+    4300152: Shoulder Joint 01
+    4300154: Shoulder 01
+    4300156: Upper Arm 01
+    4300158: Joint 01
+    4300160: Shoulder Pin 01
+    4300162: Elbow Start 01
+    4300164: Elbow Front
+    4300166: Lower Arm 01
+    4300168: Wrist 01
+    4300170: Part 01
+    4300172: Clasp Arm 01
+    4300174: Clasper Top 01
+    4300176: Clasp 02
+    4300178: Clasper Bottom 01
+    4300180: Part 02
+    4300182: Light Stem
+    4300184: Front Light Housing
+    4300186: Light Metal Front
+    4300188: Light Prism 01
+    4300190: Port Hole 01
+    4300192: Port Window 01
+    4300194: Port Hole 02
+    4300196: Port Window 02
+    4300198: Port Hole 03
+    4300200: Port Window 03
+    4300202: Shoulder Joint 02
+    4300204: Shoulder 02
+    4300206: Upper Arm 02
+    4300208: Joint 02
+    4300210: Shoulder Pin 02
+    4300212: Elbow Start 02
+    4300214: Elbow Front01
+    4300216: Lower Arm 02
+    4300218: Wrist 02
+    4300220: Part 03
+    4300222: Clasp Arm 02
+    4300224: Clasper Top 02
+    4300226: Clasp 03
+    4300228: Clasper Bottom 02
+    4300230: Part 04
+    4300232: Engine Arm 02
+    4300234: Arm 04
+    4300236: Engine Front 02
+    4300238: MP02
+    4300240: Blade Arm 05
+    4300242: Blade Arm 06
+    4300244: Blade Arm 07
+    4300246: Blade Arm 08
+    4300248: Blade Guard 02
+    4300250: Engine Knob 02
+    4300252: Propeller 02
+    4300254: Engine Arm 03
+    4300256: Arm 06
+    4300258: Engine Front 04
+    4300260: MP04
+    4300262: Blade Arm 13
+    4300264: Blade Arm 14
+    4300266: Blade Arm 15
+    4300268: Blade Arm 16
+    4300270: Blade Guard 04
+    4300272: Engine Knob 04
+    4300274: Propeller 04
+    4300276: Engine Arm 04
+    4300278: Arm 05
+    4300280: Engine Front 03
+    4300282: MP03
+    4300284: Blade Arm 09
+    4300286: Blade Arm 10
+    4300288: Blade Arm 11
+    4300290: Blade Arm 12
+    4300292: Blade Guard 03
+    4300294: Engine Knob 03
+    4300296: Propeller 03
+    4300298: Support 01
+    4300300: Support 02
+    4300302: Support 03
+    4300304: Support 04
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

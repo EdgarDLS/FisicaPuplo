@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class TargetRandomMovement : MonoBehaviour
 {
-    public readonly float NEW_POSITION = 0.8f;
+    public float NEW_POSITION = 0.8f;
 
     public GameObject TargetMovement;
 
-    private Vector3 newTargetPosition;
+    public Vector3 newTargetPosition;
 
     private float timer = 999999;
 
-	// Update is called once per frame
-	void Update ()
-    {
+    public bool arrowTarget = false;
 
-        if (timer > NEW_POSITION)
+    public GameObject itemStucked;
+
+    [Space]
+    public GameObject tentacleFinalPoint;
+
+    // Update is called once per frame
+    void Update ()
+    {
+        if (timer > NEW_POSITION && !arrowTarget)
         {
             NewPosition();
 
@@ -26,10 +32,22 @@ public class TargetRandomMovement : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, newTargetPosition, Time.deltaTime);
 
         timer += Time.deltaTime;
+
+        if (arrowTarget && (transform.position - newTargetPosition).magnitude < 0.2f)
+        {
+            arrowTarget = !arrowTarget;
+            CollisionManager.manager.arrowsStucked.Remove(itemStucked);
+
+            itemStucked.gameObject.transform.parent.transform.parent = tentacleFinalPoint.transform;
+
+            Destroy(itemStucked.transform.parent.gameObject, 5);
+        }
 	}
 
     private void NewPosition()
     {
         newTargetPosition = TargetMovement.transform.position + Random.insideUnitSphere * 10;
+
+        NEW_POSITION = Random.Range(0.75f, 0.85f);
     }
 }

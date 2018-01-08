@@ -33,6 +33,7 @@ public class Arrow : MonoBehaviour
     public Vector3 dragForce;
     public Vector3 actualVelocity;
 
+    private bool arrowCollision = false;
 
     void Start()
     {
@@ -72,15 +73,30 @@ public class Arrow : MonoBehaviour
 
     private void Update()
     {
-        if (time > 0.02)
+        if (!arrowCollision)
         {
             dragForce = Utils.DragForce(underWater, actualVelocity, dragCoefficient, 1);
-            this.transform.position = Utils.refreshPosition(this.transform.position, arrowMass, dragForce, initialVelocity, actualVelocity, timePlus);
+            this.transform.position = Utils.RefreshPosition(this.transform.position, arrowMass, dragForce, actualVelocity, timePlus);
+            actualVelocity = Utils.RefreshVelocity(actualVelocity, dragForce, arrowMass, timePlus);
 
-            time = 0;
-        }
+            if (this.transform.position.y < -15)
+            {
+                CollisionManager.manager.projectileColliders.Remove(this.GetComponent<ColliderSphere>());
+                Destroy(this.gameObject);
+            }
 
-        time += Time.deltaTime;
-        timePlus += Time.deltaTime;
+            timePlus += Time.deltaTime;
+        }    
+    }
+
+    public void SetInitialVelocity(Vector3 _initialVelocity)
+    {
+        initialVelocity = _initialVelocity;
+    }
+
+    public void StopArrow()
+    {
+        actualVelocity = new Vector3(0, 0, 0);
+        arrowCollision = true;
     }
 }
