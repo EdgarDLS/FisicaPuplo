@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Controller : MonoBehaviour
     public GameObject throwingObject;
 
     private Transform launchPosition;
+
+    [Space]
+    private float powerVariable = 0;
+    public Text powerText;
 
     private void Start()
     {
@@ -43,21 +48,25 @@ public class Controller : MonoBehaviour
 
 
         // Input Attack
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
+        {
+            powerVariable += Time.deltaTime * 20;
+            powerText.text = powerVariable.ToString("F0") + " %";
+        }
+
+        else if(Input.GetMouseButtonUp(0))
         {
             GameObject projectile = Instantiate(throwingObject, launchPosition.position, launchPosition.rotation) as GameObject;
             projectile.GetComponentInChildren<ColliderSphere>().AddColliderToManager();
-            //SetLaunchingParameters(projectile);  
+            SetLaunchingParameters(projectile);  
+
+            powerText.text = "0 %";
+            powerVariable = 0;
         }
-	}
+    }
 
     private void SetLaunchingParameters(GameObject projectile)
     {
-        Vector3 newVelocity;
-
-        newVelocity = new Vector3(launchVelocity.x * Mathf.Cos(this.transform.rotation.y) - launchVelocity.y * Mathf.Sin(this.transform.rotation.y),
-            launchVelocity.y * Mathf.Cos(this.transform.rotation.y) + launchVelocity.x * Mathf.Sin(this.transform.rotation.y), launchVelocity.z); 
-
-        projectile.GetComponent<Arrow>().SetInitialVelocity(newVelocity);
+        projectile.GetComponent<Arrow>().SetInitialVelocity(powerVariable);
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public static class Utils
 {
-    public static readonly float G = 9.81f / 10;
+    public static readonly float G = -9.81f;
 
     public static Vector3 DragForce(bool underWater, Vector3 velocity, float dragCoefficient, float crossSectionalArea)
     {
@@ -18,6 +18,8 @@ public static class Utils
         resultantVector.x = 0.5f * density * Mathf.Pow(velocity.x, 2) * dragCoefficient * crossSectionalArea;
         resultantVector.y = 0.5f * density * Mathf.Pow(velocity.y, 2) * dragCoefficient * crossSectionalArea;
         resultantVector.z = 0.5f * density * Mathf.Pow(velocity.z, 2) * dragCoefficient * crossSectionalArea;
+
+        resultantVector *= -1;
 
         return resultantVector;
     }
@@ -40,11 +42,11 @@ public static class Utils
     {
         Vector3 newPosition = new Vector3();
 
-        newPosition.x = position.x + mass / dragForce.x * actualVelocity.x * (1 - Mathf.Exp((-dragForce.x / mass) * time));
-        newPosition.y = position.y + mass / dragForce.y * (mass * G / dragForce.y + actualVelocity.y) * (1 - Mathf.Exp((-dragForce.y / mass) * 0.02f)) - mass * G/dragForce.y * time;
-        newPosition.z = position.z;
+        newPosition = position + actualVelocity * Time.deltaTime;
 
-        Debug.Log(newPosition);
+        //newPosition.x = position.x + mass / dragForce.x * actualVelocity.x * (1 - Mathf.Exp((-dragForce.x / mass) * time));
+        //newPosition.y = position.y + mass / dragForce.y * (mass * G / dragForce.y + actualVelocity.y) * (1 - Mathf.Exp((-dragForce.y / mass) * 0.02f)) - mass * G/dragForce.y * time;
+        //newPosition.z = position.z;
 
         // Debug.Log("Dragforce.x: " + dragForce.x + " Dragforce.y: " + dragForce.y +" EXPX: " + Mathf.Exp((-dragForce.y / mass) * time) + " EXPY: " + Mathf.Exp((-dragForce.x / mass) * time)); 
 
@@ -53,10 +55,12 @@ public static class Utils
 
     public static Vector3 RefreshVelocity(Vector3 actualVelocity, Vector3 dragForce, float mass, float time)
     {
-        Debug.Log(actualVelocity);
+        Vector3 gravityVector = new Vector3(0, G * mass, 0);
 
-        actualVelocity.x = actualVelocity.x * Mathf.Exp((-dragForce.x / mass) * time);
-        actualVelocity.y = mass * G / dragForce.y + (mass * G / dragForce.y + actualVelocity.y) * Mathf.Exp((-dragForce.y / mass) * time);
+        actualVelocity += ((gravityVector + dragForce) / mass) * time;
+
+        //actualVelocity.x = actualVelocity.x * Mathf.Exp((-dragForce.x / mass) * time);
+        //actualVelocity.y = mass * G / dragForce.y + (mass * G / dragForce.y + actualVelocity.y) * Mathf.Exp((-dragForce.y / mass) * time);
 
         Debug.Log(actualVelocity);
 

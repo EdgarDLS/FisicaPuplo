@@ -25,15 +25,13 @@ public class Arrow : MonoBehaviour
     public float arrowMass;
     public bool underWater = false;
 
-    public float time = 0;
-    public float timePlus = 0;
-
     [Space(30)]
     public float dragCoefficient;
     public Vector3 dragForce;
     public Vector3 actualVelocity;
 
     private bool arrowCollision = false;
+    private float powerForce = 0;
 
     void Start()
     {
@@ -68,30 +66,34 @@ public class Arrow : MonoBehaviour
                 break;
         }
 
-        actualVelocity = initialVelocity;
+        actualVelocity = new Vector3(powerForce * -GameMaster.GM.player.transform.forward.x * Mathf.Cos(launchAngle * Mathf.Deg2Rad), powerForce * Mathf.Sin(launchAngle * Mathf.Deg2Rad), -powerForce * GameMaster.GM.player.transform.forward.z * Mathf.Cos(launchAngle * Mathf.Deg2Rad));
     }
 
     private void Update()
     {
         if (!arrowCollision)
         {
+
             dragForce = Utils.DragForce(underWater, actualVelocity, dragCoefficient, 1);
-            this.transform.position = Utils.RefreshPosition(this.transform.position, arrowMass, dragForce, actualVelocity, timePlus);
-            actualVelocity = Utils.RefreshVelocity(actualVelocity, dragForce, arrowMass, timePlus);
+
+            actualVelocity = Utils.RefreshVelocity(actualVelocity, dragForce, arrowMass, Time.deltaTime);
+            this.transform.position = Utils.RefreshPosition(this.transform.position, arrowMass, dragForce, actualVelocity, Time.deltaTime);
 
             if (this.transform.position.y < -15)
             {
                 CollisionManager.manager.projectileColliders.Remove(this.GetComponent<ColliderSphere>());
                 Destroy(this.gameObject);
             }
-
-            timePlus += Time.deltaTime;
+            else if (this.transform.position.y < -3.20)
+            {
+                underWater = true;
+            }
         }    
     }
 
-    public void SetInitialVelocity(Vector3 _initialVelocity)
+    public void SetInitialVelocity(float _powerForce)
     {
-        initialVelocity = _initialVelocity;
+        powerForce = _powerForce;
     }
 
     public void StopArrow()
