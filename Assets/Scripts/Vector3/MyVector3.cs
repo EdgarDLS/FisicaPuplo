@@ -43,7 +43,7 @@ public class MyVector3
 
     public static MyVector3 Cross(MyVector3 lhs, MyVector3 rhs)
     {
-        return new MyVector3(lhs.y * rhs.z - lhs.z * rhs.y, lhs.x * rhs.z - lhs.z * rhs.x, lhs.x * rhs.y - lhs.y * rhs.x);
+        return new MyVector3(lhs.y * rhs.z - lhs.z * rhs.y, lhs.z * rhs.x - lhs.x * rhs.z, lhs.x * rhs.y - lhs.y * rhs.x);
     }
 
     public static float Angle(MyVector3 lhs, MyVector3 rhs)
@@ -51,7 +51,6 @@ public class MyVector3
         return Mathf.Acos(Dot(lhs, rhs) / (lhs.Module() * rhs.Module()));
     }
 
-    //NO FUNCIONA ENCARA
     public static MyVector3 Lerp(MyVector3 origin, MyVector3 target, float time)
     {
         return (target - origin) * (Time.deltaTime / time);
@@ -60,12 +59,12 @@ public class MyVector3
     //OPERADORS
     public static MyVector3 operator +(MyVector3 lhs, MyVector3 rhs)
     {
-        return new MyVector3(lhs.x + rhs.x, lhs.y + rhs.y, lhs.x + rhs.z);
+        return new MyVector3(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z);
     }
 
     public static MyVector3 operator -(MyVector3 lhs, MyVector3 rhs)
     {
-        return new MyVector3(lhs.x - rhs.x, lhs.y - rhs.y, lhs.x - rhs.z);
+        return new MyVector3(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z);
     }
 
     public static MyVector3 operator *(MyVector3 v, float f)

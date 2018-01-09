@@ -96,6 +96,26 @@ public class MyQuat
         return axisQuat;
     }
 
+    public static MyQuat Axis2Quad(float angle, MyVector3 v3)
+    {
+        MyQuat axisQuat = new MyQuat();
+
+        // RADIANES
+
+        v3.Normalize();
+
+        float radianAngle = angle * Mathf.Deg2Rad;
+
+        axisQuat.x = v3.x * Mathf.Sin(radianAngle / 2);
+        axisQuat.y = v3.y * Mathf.Sin(radianAngle / 2);
+        axisQuat.z = v3.z * Mathf.Sin(radianAngle / 2);
+        axisQuat.w = Mathf.Cos(radianAngle / 2);
+
+        axisQuat.Normalization();
+
+        return axisQuat;
+    }
+
     public MyQuat Quad2Axis(MyQuat q1)
     {
         MyQuat returnQuaternion = new MyQuat();

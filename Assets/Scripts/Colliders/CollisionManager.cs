@@ -89,6 +89,7 @@ public class CollisionManager : MonoBehaviour
         }
 
         target.GetComponent<TargetRandomMovement>().itemStucked = manager.arrowsStucked[0];
+        arrowsStucked.Remove(manager.arrowsStucked[0]);
         target.GetComponent<TargetRandomMovement>().arrowTarget = true;
     }
 

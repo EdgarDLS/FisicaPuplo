@@ -4,13 +4,13 @@ using UnityEngine;
 
 
 
-public static class Utils
+public static class Utils_BackUp
 {
     public static readonly float G = -9.81f;
 
-    public static MyVector3 CuadraticDragForce(bool underWater, MyVector3 velocity, float dragCoefficient, float crossSectionalArea)
+    public static Vector3 DragForce(bool underWater, Vector3 velocity, float dragCoefficient, float crossSectionalArea)
     {
-        MyVector3 resultantVector = new MyVector3(0, 0, 0);
+        Vector3 resultantVector = new Vector3(0, 0, 0);
         float density = 1.225f;
 
         if (underWater) density = 1000f;
@@ -24,21 +24,23 @@ public static class Utils
         return resultantVector;
     }
 
-    public static MyVector3 DragForce(bool underWater, MyVector3 velocity, float dragCoefficient, float crossSectionalArea)
+    public static Vector3 CuadraticDragForce(bool underWater, Vector3 velocity, float dragCoefficient, float crossSectionalArea)
     {
-        MyVector3 resultantVector = new MyVector3(0, 0, 0);
+        Vector3 resultantVector = new Vector3(0, 0, 0);
         float density = 1.225f;
 
         if (underWater) density = 1000f;
 
-        resultantVector =  (velocity * -1) * dragCoefficient;
+        resultantVector.x = 1 / 2 * density * velocity.x * dragCoefficient * crossSectionalArea;
+        resultantVector.y = 1 / 2 * density * velocity.y * dragCoefficient * crossSectionalArea;
+        resultantVector.z = 1 / 2 * density * velocity.z * dragCoefficient * crossSectionalArea;
 
         return resultantVector;
     }
 
-    public static MyVector3 RefreshPosition(MyVector3 position, float mass, MyVector3 dragForce, MyVector3 actualVelocity, float time)
+    public static Vector3 RefreshPosition(Vector3 position, float mass, Vector3 dragForce, Vector3 actualVelocity, float time)
     {
-        MyVector3 newPosition = new MyVector3();
+        Vector3 newPosition = new Vector3();
 
         newPosition = position + actualVelocity * Time.deltaTime;
 
@@ -51,9 +53,9 @@ public static class Utils
         return newPosition;
     }
 
-    public static MyVector3 RefreshVelocity(MyVector3 actualVelocity, MyVector3 dragForce, float mass, float time)
+    public static Vector3 RefreshVelocity(Vector3 actualVelocity, Vector3 dragForce, float mass, float time)
     {
-        MyVector3 gravityVector = new MyVector3(0, G * mass, 0);
+        Vector3 gravityVector = new Vector3(0, G * mass, 0);
 
         actualVelocity += ((gravityVector + dragForce) / mass) * time;
 

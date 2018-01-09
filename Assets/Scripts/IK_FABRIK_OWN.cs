@@ -1,10 +1,10 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 
-public class IK_FABRIK2 : MonoBehaviour
+public class IK_FABRIK_OWN : MonoBehaviour
 {
     //public const int MAX_ITERATIONS = 100;
 
@@ -14,13 +14,19 @@ public class IK_FABRIK2 : MonoBehaviour
     public float maxAngleRotation = 40;
 
     [Space]
+    public float minSwingClamp = 0.9f;
+    public float maxSwingClamp = 1.1f;
+    public float minTwistClamp = 0.9f;
+    public float maxTwistClamp = 1.1f;
+
+    [Space]
     public Transform[] joints;
     public Transform target;
 
     //public int numIterations;
 
     private MyVector3[] copy;
-    
+
     //private Vector3[] copy;
     private float[] distances;
     private bool done;
@@ -30,10 +36,10 @@ public class IK_FABRIK2 : MonoBehaviour
     void Start()
     {
         //tentacleChilds = tentacleArm.GetComponentsInChildren<Rigidbody>();
-      
+
         distances = new float[joints.Length - 1];
         copy = new MyVector3[joints.Length];
-        
+
         //copy = new Vector3[joints.Length];
     }
 
@@ -42,14 +48,14 @@ public class IK_FABRIK2 : MonoBehaviour
         // Copy the joints positions to work with
         //TODO
         copy[0] = new MyVector3(joints[0].position);
-        
+
         //copy[0] = joints[0].position;
 
         for (int i = 0; i < joints.Length - 1; i++)
         {
             copy[i + 1] = new MyVector3(joints[i + 1].position);
             distances[i] = (copy[i + 1] - copy[i]).Module();
-            
+
             //copy[i + 1] = joints[i + 1].position;
             //distances[i] = (copy[i + 1] - copy[i]).magnitude;
         }
@@ -57,13 +63,13 @@ public class IK_FABRIK2 : MonoBehaviour
 
         //done = TODO
         done = (copy[copy.Length - 1] - new MyVector3(target.position)).Module() < tresholdCondition;
-        
+
         //done = (copy[copy.Length - 1] - target.position).magnitude < tresholdCondition;
 
         if (!done)
         {
             float targetRootDist = (copy[0] - new MyVector3(target.position)).Module();
-            
+
             //float targetRootDist = Vector3.Distance(copy[0], target.position);
 
             // Update joint positions
@@ -115,14 +121,14 @@ public class IK_FABRIK2 : MonoBehaviour
 
                         copy[i] = (1 - lambda) * copy[i + 1] + lambda * copy[i];
 
-                        
+
 
                     }
 
                     // STAGE 2: BACKWARD REACHING
                     //TODO
                     copy[0] = b;
-                    
+
                     for (int i = 0; i < copy.Length - 1; i++)
                     {
                         float r = (copy[i + 1] - copy[i]).Module();
@@ -184,7 +190,7 @@ public class IK_FABRIK2 : MonoBehaviour
                     joints[i + 1].rotation = joints[i].rotation;
 
 
-                joints[i + 1].position = new Vector3(copy[i + 1].x, copy[i + 1].y, copy[i + 1].z);
+                joints[i + 1].position = (Vector3)copy[i + 1];
 
 
                 //joints[i + 1].position = copy[i + 1];
